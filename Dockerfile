@@ -40,6 +40,7 @@ WORKDIR /haskell-palette
 
 COPY --from=build-haskell /build/artifacts/haskell-palette /usr/bin/
 COPY --from=build-assets /build/index.html .
+COPY ./example.png /
 EXPOSE 3000/tcp
 
 ENTRYPOINT ["/usr/bin/haskell-palette"]
